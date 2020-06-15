@@ -1,0 +1,193 @@
+\documentclass[a4paper,8pt]{extarticle}
+\usepackage{amssymb,amsmath,amsthm,amsfonts}
+\usepackage{multicol,multirow}
+\usepackage{calc}
+\usepackage{ifthen}
+\usepackage{tabularx}
+\usepackage[utf8]{inputenc}
+\usepackage[landscape]{geometry}
+\usepackage[colorlinks=true,citecolor=blue,linkcolor=blue]{hyperref}
+\usepackage{accents}
+\newcommand{\vect}[1]{\accentset{\rightharpoonup}{#1}}
+
+\ifthenelse{\lengthtest { \paperwidth = 11in}}
+    { \geometry{top=.5in,left=.5in,right=.5in,bottom=.5in} }
+	{\ifthenelse{ \lengthtest{ \paperwidth = 297mm}}
+		{\geometry{top=1cm,left=1cm,right=1cm,bottom=1cm} }
+		{\geometry{top=1cm,left=1cm,right=1cm,bottom=1cm} }
+	}
+\pagestyle{empty}
+\makeatletter
+\renewcommand{\section}{\@startsection{section}{1}{0mm}%
+                                {-1ex plus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%x
+                                {\normalfont\large\bfseries}}
+\renewcommand{\subsection}{\@startsection{subsection}{2}{0mm}%
+                                {-1explus -.5ex minus -.2ex}%
+                                {0.5ex plus .2ex}%
+                                {\normalfont\normalsize\bfseries}}
+\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{0mm}%
+                                {-1ex plus -.5ex minus -.2ex}%
+                                {1ex plus .2ex}%
+                                {\normalfont\small\bfseries}}
+\makeatother
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt plus 0.5ex}
+% -----------------------------------------------------------------------
+
+\title{Analiza 2}
+
+\begin{document}
+
+\raggedright
+\footnotesize
+
+\begin{multicols}{4}
+\setlength{\premulticols}{1pt}
+\setlength{\postmulticols}{1pt}
+\setlength{\multicolsep}{1pt}
+\setlength{\columnsep}{2pt}
+
+\section{Uporaba integrala}
+
+\textbf{Računanje površine ravninskih likov pod krivulijo}
+\[
+    p = \int^b_a f(x)\ dx
+\]
+
+\textbf{Dolžina ravninske krivulije}
+\[ s = \int^b_a \sqrt{1+f'(x)^2}\ dx \]
+
+\textbf{Prostornina in površina vrtenine} (vrtimo okoli $x$ osi)
+\[ V = \pi \int^b_a f(x)^2\ dx\]
+\[ P = 2\pi \int^b_a f(x)\sqrt{1+(f'(x))^2}\ dx\]
+
+\textbf{Prostornina vrtenine} (vrtimo okoli $y$ osi)
+\[ V = 2\pi \int^b_a x f(x)\ dx \]
+
+\textbf{Težišče ravninskih likov}
+\[ y_T = \frac{\int^b_a f(x)^2 \ dx}{2p}\]
+
+Doložina poti, ki jo pri vrtenju za $360^\circ$ opiše težišče je $2\pi y_T$.
+\[ 2\pi y_T p = \pi \int^b_a f(x)^2 \ dx = V\]
+
+
+\textbf{Težišče ravninske krivulije}
+\[ y_T = \frac{\int^b_a f(x) \sqrt{1+(f'(x))^2} \ dx}{s}\]
+
+\textbf{Dolžina ravninske krivulije}
+\[ y_T = \frac{\int^b_a f(x) \sqrt{1+(f'(x))^2}\ dx}{s} \]
+
+\section{Parametrično podane krivulje}
+Enačba krivulje v $\mathbb{R}^3$ je oblike
+\[ \vect{r} : [a,b] \to \mathbb{R}^3 \]
+\[ \vect{r}(t) = (x(t), y(t), z(t)) \in \mathbb{R}^3 \]
+
+\subsubsection{Krivulje v polarnih koordinatah}
+\[r = r(\varphi)\]
+\[x(\varphi) = r(\varphi) \cos \varphi\]
+\[y(\varphi) = r(\varphi) \sin \varphi\]
+\[ \vect{r} (\varphi) = ( r(\varphi) \cos \varphi, r(\varphi) \sin \varphi)\]
+
+\subsubsection{Tangenta parametrične krivulije}
+Tangenta je kar vektor, ki ga dobimo z odvajanjem parametrične enačbe.
+\[ \vect{r}(t) = (x(t), y(t), z(t))\]
+\[ \dot{\vect{r}}(t) = (\dot{x}(t), \dot{y}(t), \dot{z}(t))\]
+
+\subsubsection{Doložina parametrično podane krivulije}
+Majhen delček krivulije ima dolžino $ds = \| \vect{r}(t+dt) - \vect{r}(t)\| = \|\dot{\vect{r}}(t)\| $. 
+Doložina večjega dela krivulje je potem integral teh delčkov:
+\[s = \int^b_a \|\dot{\vect{r}}(t)\|\ dt\]
+
+\subsubsection{Doložina krivulije v polarnih koordinatah}
+\[s = \int^b_a \sqrt{\dot{r}(\varphi)^2 + r(\varphi)^2}\ d\varphi\]
+
+\subsubsection{Naravna parametrizacija}
+Pot $\vect{r} : I \to \mathbb{R}^3$ je naravno parametrizirana, če je $\forall t\in I\ :\ |\dot{\vect{r}}(t)| = 1$.\\
+Vsako pot lahko \textbf{naravno reparametriziramo}. Za nek $a\in I$ definiramo funkcijo
+\begin{equation*}
+    \begin{aligned}
+        s:\ & I \to J & s(t) =& \int_a^t |\dot{\vect{r}}(\tau)|d\tau\\
+    \end{aligned}
+\end{equation*}
+z $t : J \to I$ označimo izverz od s $s$. Potem je $\vect{\varphi}(s) : J \to \mathbb{R}$ dana s predpisom $\vect{\varphi}(s) = \vect{r}(t(s))$ \emph{naravno parametrizirana pot}.
+
+\subsubsection{Frenetove formule}
+Naj bo $\vect{r}(s)$ naravna parametrizacija.
+\begin{equation*}
+    \begin{aligned}
+        \underbrace{\vect{T} = \vect{r}\,'}_\textmd{tangenta} &&
+        \underbrace{\vect{N} = \frac{\vect{T}'}{|\vect{T}'|}}_\textmd{normala} &&
+        \underbrace{\vect{B} = \vect{T} \times \vect{N}}_\textmd{binormala}
+    \end{aligned}
+\end{equation*}
+$\kappa = |\vect{T}'| = |\vect{r}\,''|\ \dots $ fleksijska ukrivljenost\\\ \\
+$\tau = \frac{(\vect{r}\,' \times \vect{r}\,'')\vect{r}\,'''}{|\vect{r}\,''|^2}\ \dots $ torzijska ukrivljenost
+
+Če je $\forall s \in I\ :\ \kappa(s) \neq 0$ so vektorji $\vect{T},\vect{N},\vect{B}$ dobro definirani in veljajo \textbf{Frenetove formule}:
+\begin{equation*}
+    \begin{aligned}
+        \vect{T}' = \kappa \vect{N}\quad &&
+        \vect{N}' = \tau\vect{B}-\kappa \vect{T} && \quad
+        \vect{B}' = -\tau \vect{N}
+    \end{aligned}
+\end{equation*}
+
+\subsubsection{Frenetova baza in ukrivljenost v poljubni parametrizaciji}
+Naj bo $\vect{r}(t)$ poljubna regularna pot z neničelno fleksijska ukrivljenostjo.
+\begin{equation*}
+    \begin{aligned}
+        \vect{T} = \frac{\dot{\vect{r}}}{|\dot{\vect{r}}|} \quad &&
+        \vect{B} = \frac{\dot{\vect{r}} \times \ddot{\vect{r}}}{|\dot{\vect{r}} \times \ddot{\vect{r}}|} && \quad
+        \vect{N} = \vect{B} \times \vect{T}\\
+    \end{aligned}
+\end{equation*}
+\begin{equation*}
+    \begin{aligned}
+        \kappa = \frac{|\,\dot{\vect{r}} \times \ddot{\vect{r}}\,|}{|\,\dot{\vect{r}}\,|^3} && \quad
+        \tau = \frac{\big(\,\dot{\vect{r}} \times \ddot{\vect{r}}\,\big)\dddot{\vect{r}}}{|\,\dot{\vect{r}} \times \ddot{\vect{r}}\,|^2}
+    \end{aligned}
+\end{equation*}
+
+\section{Metrični prostor}
+Preslikava $d:M\to M$ je \textbf{metrika} na množici $M$, če velja:
+\begin{itemize}
+    \item $d(x,y) \geq 0$ in $d(x,y) = 0 \Leftrightarrow x = y$
+    \item $d(x,y) = d(y,x)$
+    \item $d(x,z) \leq d(x,y) + d(y,z)$
+\end{itemize}
+\textbf{Metrični prostor} je par $(M,d)$.\\
+\textbf{Normiran prostor} je \emph{vektorski prostor} $V$ opremljen z normo.
+\textbf{Norma} je preslikava $\|\,\| : V \to \mathbb{R}^+$, ki ima lastnosti:
+\begin{itemize}
+    \item $\|v\| = 0 \Rightarrow v = 0$
+    \item $\|\alpha v \| = |\alpha| \|v\|$
+    \item $ \| w + v \| \leq \| w \| + \| v \| $
+\end{itemize}
+Potem je $V$ tudi metrični prostor z $d(w,v) = \| w-v \|$.
+\subsubsection{Odprte in zaprte množice}
+\textbf{Odprta krogla} $B(a,r) = \left\{ x \in M : d(a,x) < r \right\}$\\
+\textbf{Zaprta krogla} $\overline{B}(a,r) = \left\{ x \in M : d(a,x) \leq r \right\}$\\
+Množiva $U \subseteq M$ je \textbf{odprta}, če 
+\[\forall a \in U\ \exists \varepsilon > 0 : B(a,\varepsilon) \subseteq U \]
+Množica $U \subset M$ je \textbf{zaprta}, če je $U^C$ odprta.\\
+\textbf{Zaprtje} $\bar{A}$ množice $A$ je najmanjša množica v $M$, ki vsebuje $A$. \\
+\textbf{Notranjost} $\mathring{A}$ je največja odprta množiva vsebovana v $A$.\\
+\subsubsection{Rob množice}
+Naj bo $A \subseteq M$.
+Točka $a\in A$ je \textbf{robna}, če vsaka odprta krogla $B(a,\varepsilon)$ seka $A$ in $A^C$. \\
+\textbf{Rob} $ \partial A $ je množica vseh robnih točk množice $A$.
+\subsubsection{Zaporedja}
+Zaporedje ($a_n$) z limito v metričenem porstoru ($(M,d)$) je \textbf{konvergentno} z limito $a \in M$, če velja:
+\[ \lim_{n \to \infty} d(a_n, a) = 0 \]
+\[ \forall \varepsilon > 0\ \exists n_0 \in \mathbb{N} : n \geq n_0 \Rightarrow d(a_n, a) < \varepsilon \]
+Zaporedje ($a_n$) je \textbf{Cauchyevo}, če velja:
+\[ \forall \varepsilon > 0\ \exists n_0 \in \mathbb{N} : n,m \geq n_0 \Rightarrow d(a_n, a_m) < \varepsilon \]
+Vsako konvergentno zaporedje je tudi Cauchyevo. Obratno pa je res samo, če je metrični prostor \textbf{poln}. ($\mathbb{R}^n$ je poln)
+\subsubsection{Kompaktnost}
+\subsubsection{Zveznost}
+\subsubsection{Skrčitve}
+\subsubsection{Banachovo načelo}
+\end{multicols}
+\end{document}

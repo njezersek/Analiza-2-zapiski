@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2020.1.3)  15 JUN 2020 23:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2020.1.3)  16 JUN 2020 16:44
 entering extended mode
 **"c:/Users/njeze/Documents/Sola/faks_2019-2020/analiza/Zapiski - upraba integrala, metricni prostiri, diferencialne enacbe/ana.tex"
 ("c:/Users/njeze/Documents/Sola/faks_2019-2020/analiza/Zapiski - upraba integrala, metricni prostiri, diferencialne enacbe/ana.tex"
@@ -422,83 +422,117 @@ LaTeX Info: Redefining \nameref on input line 41.
 \@outlinefile=\write3
 \openout3 = `ana.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 55.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 54.
  ("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 55.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 54.
  ("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 
-Package hyperref Warning: Composite letter `\textasciicaron+c'
-(hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 82.
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 82.
 
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 87.
+(hyperref)                than one, level fixed on input line 95.
+
+
+Overfull \hbox (0.5229pt too wide) detected at line 112
+[] [] \OT1/cmr/m/n/6 = [] [] [] ;  \OML/cmm/m/it/6 ! \OT1/cmr/m/n/6 = [] \OMS/cmsy/m/n/6   [][]
+ []
 
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 93.
+(hyperref)                removing `\textasciicaron' on input line 126.
 
 
-Package hyperref Warning: Composite letter `\textasciicaron+c'
-(hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 98.
+Overfull \hbox (11.10231pt too wide) detected at line 135
+[][]
+ []
 
-
-Package hyperref Warning: Composite letter `\textasciicaron+c'
-(hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 153.
-
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 156.
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 141.
 ("C:\Program Files\MiKTeX 2.9\tex/latex/base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <6> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 156.
-
-
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 169.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 141.
 
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 190.
+(hyperref)                removing `\textasciicaron' on input line 180.
+
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 185.
 
 
 Package hyperref Warning: Composite letter `\textasciicaron+c'
 (hyperref)                not defined in PD1 encoding,
 (hyperref)                removing `\textasciicaron' on input line 191.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 193.
+
+Package hyperref Warning: Composite letter `\textasciicaron+c'
+(hyperref)                not defined in PD1 encoding,
+(hyperref)                removing `\textasciicaron' on input line 196.
+
+
+Package hyperref Warning: Composite letter `\textasciicaron+c'
+(hyperref)                not defined in PD1 encoding,
+(hyperref)                removing `\textasciicaron' on input line 251.
+
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 267.
+
+
+Overfull \hbox (4.27106pt too wide) detected at line 301
+\OMS/cmsy/m/n/6 8\OML/cmm/m/it/6 " > \OT1/cmr/m/n/6 0 \OMS/cmsy/m/n/6 9\OML/cmm/m/it/6  > \OT1/cmr/m/n/6 0 \OMS/cmsy/m/n/6 8\OML/cmm/m/it/6 x \OMS/cmsy/m/n/6 2 \OML/cmm/m/it/6 M[] \OT1/cmr/m/n/6 : \OML/cmm/m/it/6 d[]\OT1/cmr/m/n/6 (\OML/cmm/m/it/6 x; a\OT1/cmr/m/n/6 ) \OML/cmm/m/it/6 <  \OMS/cmsy/m/n/6 ) \OML/cmm/m/it/6 d[]\OT1/cmr/m/n/6 (\OML/cmm/m/it/6 f\OT1/cmr/m/n/6 (\OML/cmm/m/it/6 x\OT1/cmr/m/n/6 )\OML/cmm/m/it/6 ; f\OT1/cmr/m/n/6 (\OML/cmm/m/it/6 a\OT1/cmr/m/n/6 )) \OML/cmm/m/it/6 < "\OT1/cmr/m/n/6 )
+ []
+
+
+Overfull \hbox (8.88072pt too wide) detected at line 309
+\OMS/cmsy/m/n/6 8\OML/cmm/m/it/6 " > \OT1/cmr/m/n/6 0 \OMS/cmsy/m/n/6 9\OML/cmm/m/it/6  > \OT1/cmr/m/n/6 0 \OMS/cmsy/m/n/6 8\OML/cmm/m/it/6 x; y \OMS/cmsy/m/n/6 2 \OML/cmm/m/it/6 M[] \OT1/cmr/m/n/6 : \OML/cmm/m/it/6 d[]\OT1/cmr/m/n/6 (\OML/cmm/m/it/6 x; y\OT1/cmr/m/n/6 ) \OML/cmm/m/it/6 <  \OMS/cmsy/m/n/6 ) \OML/cmm/m/it/6 d[]\OT1/cmr/m/n/6 (\OML/cmm/m/it/6 f\OT1/cmr/m/n/6 (\OML/cmm/m/it/6 x\OT1/cmr/m/n/6 )\OML/cmm/m/it/6 ; f\OT1/cmr/m/n/6 (\OML/cmm/m/it/6 y\OT1/cmr/m/n/6 )) \OML/cmm/m/it/6 < "
+ []
+
+
+Package hyperref Warning: Composite letter `\textasciicaron+c'
+(hyperref)                not defined in PD1 encoding,
+(hyperref)                removing `\textasciicaron' on input line 311.
+
+
+Package hyperref Warning: Composite letter `\textasciicaron+c'
+(hyperref)                not defined in PD1 encoding,
+(hyperref)                removing `\textasciicaron' on input line 314.
+
 [1
 
 {C:/Users/njeze/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 193.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 317.
+ [2]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 317.
  ("c:/Users\njeze\Documents\Sola\faks_2019-2020\analiza\Zapiski - upraba integrala, metricni prostiri, diferencialne enacbe\ana.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 193.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 193.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 317.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 317.
 Package rerunfilecheck Info: File `ana.out' has not changed.
-(rerunfilecheck)             Checksum: 55557D41CE31B84BCC7A51C0E8B178D8;1173.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 193.
+(rerunfilecheck)             Checksum: FEED3F5F4999719046E48A0CD9A32A5D;1805.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 317.
  ) 
 Here is how much of TeX's memory you used:
- 7007 strings out of 492483
- 104092 string characters out of 3131040
- 249672 words of memory out of 3000000
- 11192 multiletter control sequences out of 15000+200000
- 7420 words of font info for 28 fonts, out of 3000000 for 9000
+ 7027 strings out of 492483
+ 104328 string characters out of 3131040
+ 246672 words of memory out of 3000000
+ 11202 multiletter control sequences out of 15000+200000
+ 7769 words of font info for 29 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,20n,31p,352b,401s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on "c:/Users\njeze\Documents\Sola\faks_2019-2020\analiza\Zapiski - upraba integrala, metricni prostiri, diferencialne enacbe\ana.pdf" (1 page, 153394 bytes).
+ 40i,20n,31p,359b,471s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on "c:/Users\njeze\Documents\Sola\faks_2019-2020\analiza\Zapiski - upraba integrala, metricni prostiri, diferencialne enacbe\ana.pdf" (2 pages, 185862 bytes).
 PDF statistics:
- 132 PDF objects out of 1000 (max. 8388607)
- 19 named destinations out of 1000 (max. 500000)
- 137 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 177 PDF objects out of 1000 (max. 8388607)
+ 29 named destinations out of 1000 (max. 500000)
+ 209 words of extra memory for PDF output out of 10000 (max. 10000000)
 

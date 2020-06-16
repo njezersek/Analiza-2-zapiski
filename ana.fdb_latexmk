@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1592258049 "c:/Users/njeze/Documents/Sola/faks_2019-2020/analiza/Zapiski - upraba integrala, metricni prostiri, diferencialne enacbe/ana.tex" "c:/Users/njeze/Documents/Sola/faks_2019-2020/analiza/Zapiski - upraba integrala, metricni prostiri, diferencialne enacbe/ana.pdf" "ana" 1592258100
+["pdflatex"] 1592318697 "c:/Users/njeze/Documents/Sola/faks_2019-2020/analiza/Zapiski - upraba integrala, metricni prostiri, diferencialne enacbe/ana.tex" "c:/Users/njeze/Documents/Sola/faks_2019-2020/analiza/Zapiski - upraba integrala, metricni prostiri, diferencialne enacbe/ana.pdf" "ana" 1592318698
   "C:/Program Files/MiKTeX 2.9/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233955448 1004 54797486969f23fa377b128694d548df ""
   "C:/Program Files/MiKTeX 2.9/fonts/tfm/public/amsfonts/symbols/msam5.tfm" 1233955454 924 9904cf1d39e9767e7a3622f2a125a565 ""
   "C:/Program Files/MiKTeX 2.9/fonts/tfm/public/amsfonts/symbols/msam7.tfm" 1233955454 928 2dc8d444221b7a635bb58038579b861a ""
@@ -24,6 +24,7 @@
   "C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb" 1247596667 32587 65067f817f408bc71a7312f3d9828a9b ""
   "C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti7.pfb" 1247596667 36607 d654cb3f2bc54f57509240071db3bffa ""
   "C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmex7.pfb" 1247596670 30457 bc0868ebece724ed7c3d37e3d9bff7bd ""
+  "C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam7.pfb" 1247596673 33366 60462f3d16c3d0f024f1f856e64b09cd ""
   "C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm7.pfb" 1247596673 35309 940e81a5b9e04201a07e8b33a3ae6e64 ""
   "C:/Program Files/MiKTeX 2.9/tex/context/base/mkii/supp-pdf.mkii" 1550864520 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "C:/Program Files/MiKTeX 2.9/tex/generic/atbegshi/atbegshi.sty" 1575574700 24708 5584a51a7101caf7e6bbf1fc27d8f7b1 ""
@@ -88,15 +89,15 @@
   "C:/Program Files/MiKTeX 2.9/tex/latex/url/url.sty" 1388494052 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/njeze/AppData/Local/MiKTeX/2.9/miktex/data/le/pdftex/pdflatex.fmt" 1578084228 3764268 718b81450d7ed37b48f983ea212832ff ""
   "C:/Users/njeze/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map" 1578084185 77580 0902bf85dfadfdef13ad4bb0cb98be38 ""
-  "ana.aux" 1592258050 2561 85b0439c283a2667681e411f97fff4e5 "pdflatex"
-  "ana.out" 1592258050 1173 55557d41ce31b84bcc7a51c0e8b178d8 "pdflatex"
-  "ana.tex" 1592258100 8144 d9130a11ff85ae480184a7358d05099c ""
-  "c:/Users/njeze/Documents/Sola/faks_2019-2020/analiza/Zapiski - upraba integrala, metricni prostiri, diferencialne enacbe/ana.aux" 1592258050 2561 85b0439c283a2667681e411f97fff4e5 ""
-  "c:/Users/njeze/Documents/Sola/faks_2019-2020/analiza/Zapiski - upraba integrala, metricni prostiri, diferencialne enacbe/ana.tex" 1592258100 8144 d9130a11ff85ae480184a7358d05099c ""
+  "ana.aux" 1592318698 3572 58a0b3da2ea9ebc22c1bbb1ec842d0b8 "pdflatex"
+  "ana.out" 1592318698 1805 feed3f5f4999719046e48a0cd9a32a5d "pdflatex"
+  "ana.tex" 1592318696 14702 4db784a374753e9886df55bb02ba6136 ""
+  "c:/Users/njeze/Documents/Sola/faks_2019-2020/analiza/Zapiski - upraba integrala, metricni prostiri, diferencialne enacbe/ana.aux" 1592318698 3572 58a0b3da2ea9ebc22c1bbb1ec842d0b8 ""
+  "c:/Users/njeze/Documents/Sola/faks_2019-2020/analiza/Zapiski - upraba integrala, metricni prostiri, diferencialne enacbe/ana.tex" 1592318696 14702 4db784a374753e9886df55bb02ba6136 ""
   (generated)
-  "ana.aux"
-  "ana.out"
   "c:/Users/njeze/Documents/Sola/faks_2019-2020/analiza/Zapiski - upraba integrala, metricni prostiri, diferencialne enacbe/ana.pdf"
+  "ana.aux"
   "ana.pdf"
+  "ana.out"
   "c:/Users/njeze/Documents/Sola/faks_2019-2020/analiza/Zapiski - upraba integrala, metricni prostiri, diferencialne enacbe/ana.log"
   "ana.log"

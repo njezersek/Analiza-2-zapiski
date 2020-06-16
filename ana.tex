@@ -49,6 +49,104 @@
 \setlength{\multicolsep}{1pt}
 \setlength{\columnsep}{2pt}
 
+\section{Odvodi}
+\setlength{\tabcolsep}{0.5em}{\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{ | r | l | }
+    \hline
+    \emph{funkcija} & \emph{odvod}\\\hline
+    $c$ & $0$ \\ \hline
+    $x^n$ & $nx^{n-1}$ \\ \hline
+    $a^x$ & $a^x\ln{a}$ \\\hline
+    $\frac{a^x}{\ln a}$ & $a^x$\\\hline
+    $x^x$ & $x^x(1+\ln{x})$ \\\hline
+    $\ln(x)$ & $\frac{1}{x}$ \\\hline
+    $\log_{a}(x)$ & $\frac{1}{x\ln(a)}$ \\\hline
+    $\sin(x)$ & $cos(x)$ \\\hline
+    $\cos(x)$ & $-sin(x)$ \\\hline
+    $\tan(x)$ & $\frac{1}{cos^2(x)}$ \\\hline
+    $\cot(x)$ & $-\frac{1}{sin^2(x)}$ \\\hline
+    $\arcsin(x)$ & $\frac{1}{\sqrt{1-x^2}}$ \\\hline
+    $\arccos(x)$ & $-\frac{1}{\sqrt{1-x^2}}$ \\\hline
+    $\arctan(x)$ & $\frac{1}{1+x^2}$ \\\hline
+    $\textrm{arccot}(x)$ & $-\frac{1}{1+x^2}$ \\\hline
+    $\textrm{sh}(x) = \frac{e^x - e^{-x}}{2}$ & $\textrm{ch}(x)$\\\hline
+    $\textrm{ch}(x) = \frac{e^x + e^{-x}}{2}$ & $\textrm{sh}(x)$\\\hline
+    $\textrm{th}(x) = \frac{\textrm{sh}(x)}{\textrm{ch}(x)}$ & $\frac{1}{\textrm{ch}^2(x)}$\\\hline
+    $\textrm{cth}(x) = \frac{1}{\textrm{th}(x)}$ & $-\frac{1}{\textrm{sh}^2(x)}$\\\hline
+    $\textrm{arsh}(x) = \ln(x+\sqrt{x^2+1})$ & $\frac{1}{\sqrt{1+x^2}}$\\\hline
+    $\textrm{arch}(x) = \ln(x+\sqrt{x^2-1})$ & $\frac{1}{\sqrt{1-x^2}}$\\\hline
+    $\textrm{arth}(x) = \frac{1}{2}\ln{\frac{1+x}{1-x}}$ & $\frac{1}{(1+x)(1-x)}$\\\hline
+\end{tabular}
+}
+
+\subsubsection{Pravila za odvajanje}
+\setlength{\tabcolsep}{0.5em}{\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{ c  c }
+    \emph{funkcija} & \emph{odvod}\\
+    $f(x)\pm g(x)$ & $f'(x)\pm g'(x)$ \\
+    $f(x)\cdot g(x)$ & $f'(x)\cdot g(x) + f(x)\cdot g'(x)$ \\
+    $\frac{f(x)}{g(x)}$ & $\frac{f'(x)\cdot g(x) - f(x) \cdot g'(x)}{g^2(x)}$ \\
+    $f(g(x))$ & $f'(g(x)) \cdot g'(x)$ \\
+    $f^{-1}(x)$ & $\frac{1}{f'(f^{-1}(x))}$
+\end{tabular}
+}
+
+\section{Integracijske metode}
+\subsubsection{Uvedba nove spremenljivke}
+\[ \int f(x)\,dx \underbrace{=}_{x=g(t)} \int f(g(t))g'(t)dt\]
+
+\[u = g(x) \implies du = g'(x) dx \implies dx = \frac{du}{g'(x)}\]
+
+\subsubsection{Perpartes}
+\[\int u(x)\,v'(x)\,dx = u(x)v(x)-\int v(x)\,u'(x)\,dx\]
+
+\subsubsection{Integral racionalne funkcije}
+Z deljenjem zapišemo racionalno funkcijo $R(x)$ v obliki $p(x) + \frac{r(x)}{q(x)}$, kejr je $r$ nižje stopnje od $q$.
+
+Polinom $q$ rezcepimo na linearne in nerazcepne kvadratne faktorje.
+
+Funkcijo $\frac{p(x)}{q(x)}$ zapišemo kot vsoto parcialnih ulomkov:
+\[\frac{1}{(x-a)^k} \leadsto \frac{A_1}{(x-a)}+\frac{A_2}{(x-a)^2} + ... + \frac{A_k}{(x-a)^k} \]
+\[\frac{1}{(x^2+bx+c)^l} \leadsto \frac{B_1 + C_1x}{(x^2+bx+c)} + ... + \frac{B_l + C_lx}{(x^2+bx+c)^l} \]
+Parcialne ulomke posamično integriremo:
+\[ \int \frac{dx}{ax^2+bx+c} = \frac{1}{a \omega} \arctan \left( \frac{2ax + b}{2a \omega}\right);\ \omega = \frac{c}{a} - \left(\frac{b}{2a}\right)^2\]
+\[ \int \frac{px+q}{\underbrace{ax^2+bx+c}_{t}}dx = \frac{p}{2a} \ln \left| t \right| + \left( q-\frac{pb}{2a} \right) \int \frac{dx}{t}\]
+\[ \int \frac{px+q}{(ax^2+bx+c)^n}dx = \frac{p}{2a}\frac{t^{1-n}}{1-n} + \left( q-\frac{pb}{2a} \right) \int \frac{dx}{t^n}\]
+\[ \int \frac{dx}{(ax^2+bx+c)^n} = \frac{1}{a^n \omega^n} I_n\]
+
+\begin{equation*}
+    \begin{aligned}
+        I_n = \int \frac{dx}{(t^2+1)^n} &&
+        I_1 = \arctan t
+    \end{aligned}
+\end{equation*}
+
+\[ I_n = I_{n-1}\left(1-\frac{1}{2(n-1)}\right) + \frac{t}{2(n-1)(t^2+1)^{n-1}}\]
+
+\subsubsection{Integrali trigonometričnih funkcij}
+Integrale z trigonometričnimi funkcijami z univerzalno trigonometrično substitucijo prevedemo na integral racionalne funkcije.
+\begin{equation*}
+    \begin{aligned}
+        \textmd{tan}\frac{x}{2} = t&&
+        dx = \frac{2dt}{1+t^2}&&
+        \textmd{cos}x = \frac{1-t^2}{1+t^2}&&
+        \textmd{sin}x = \frac{2t}{1+t^2}&&
+    \end{aligned}
+\end{equation*}
+
+\subsubsection{Integral iracionalne funkcije}
+Integrale tipa $\int \frac{p(x) dx}{\sqrt{ax^2+bx+c}}$ rešujemo na naslednji način:
+
+\begin{itemize}
+    \item Če je $p$ konstanten, integral (s substitucijo) prevedemo na enega izmed:
+    \[\int \frac{dx}{\sqrt{a^2-x^2}} = \arcsin\left( \frac{x}{a} \right) + C;\quad a > 0\]
+    \[\int \frac{dx}{\sqrt{x^2-a^2}} = \ln \left| x + \sqrt{x^2 - a^2} \right| + C;\quad a > 0\]
+    \[\int \frac{dx}{\sqrt{x^2+a^2}} = \ln \left( x + \sqrt{x^2 + a^2} \right) + C;\quad a > 0\]
+    \item Če je $p$ poljuben polinom, uporabimo nastavek: \\\ \\
+    $\int \frac{p(x)}{\sqrt{ax^2+bx+c}} dx  = \widetilde{p}(x) \sqrt{ax^2+bx+c} + \int \frac{C}{\sqrt{ax^2+bx+c}}dx $\\
+    $C$ je konstanta, $\widetilde{p}$ pa polinom, ki ima stopnjo 1 manjšo kot $p$. Koeficiente polinoma $\widetilde{p}$ in konstanto $C$ dobimo z odvajanjem zgornje enačbe.
+\end{itemize}
+
 \section{Uporaba integrala}
 
 \textbf{Računanje površine ravninskih likov pod krivulijo}
@@ -186,8 +284,34 @@ Zaporedje ($a_n$) je \textbf{Cauchyevo}, če velja:
 \[ \forall \varepsilon > 0\ \exists n_0 \in \mathbb{N} : n,m \geq n_0 \Rightarrow d(a_n, a_m) < \varepsilon \]
 Vsako konvergentno zaporedje je tudi Cauchyevo. Obratno pa je res samo, če je metrični prostor \textbf{poln}. ($\mathbb{R}^n$ je poln)
 \subsubsection{Kompaktnost}
-\subsubsection{Zveznost}
+Točka $s \in M$ je \textbf{stekališče} zaporedja $a_n$ v metričnem prostoru $(M,d)$, če $\forall \varepsilon > 0$ v krogli $B(s,\varepsilon)$ neskončno mnogo členov.
+
+Limita je tudi stekališče, obratno pa ni vedno res.
+
+Metrični prostor $M$ je \textbf{kompakten}, če ima vsako zaporedje iz $M$ stekališče v $M$. Podmnožica $U \subseteq M$ je kompaktna, če je kompaktna kot metrični prostor za metriko, ki jo podeduje iz $M$.
+
+Vsak kompakten metrični prostor je \textbf{poln}.
+
+Podmnožica metričenga prostora je \textbf{omejena}, če je če je vsebovana v kaki krogli.
+
+\emph{Heine-Borel} Podmnožica v $\mathbb{R}^n$ je \textbf{kompaktna} $\Leftrightarrow$ je zaprta in omejana. $\langle \textit{vstavi vic o fiziku, ki je čokolado} \rangle$
+
+\subsubsection{Zveznost preslikave}
+Preslikava $f:(M_1, d_1) \to (M_2, d_2)$ je zvezna v točki $a$, če
+\[\forall \varepsilon > 0\ \exists \delta > 0\ \forall x \in M_1 : d_1(x,a)<\delta \Rightarrow d_2(f(x),f(a))<\varepsilon)\]
+\[\forall \varepsilon > 0\ \exists \delta > 0 : f(B(a,\delta)) \subseteq B(f(a), \varepsilon)\]
+Preslikava je \textbf{zvezna}, če je zvezna v vsaki točki.
+
+Preslikava $f$ je zvezna v točki $a \in M_1$ $\Leftrightarrow$ za vsako zaporedje $a_n$ v $M_1$, ki konvergira proti $a$, konvergira $f(a_n)$ proti $f(a)$.
+
+\subsubsection{Enakomerna zveznost preslikave}
+Preslikava $f:(M_1, d_1) \to (M_2, d_2)$ je enakomerno zvezna, če
+\[\forall \varepsilon > 0\ \exists \delta > 0\ \forall x,y \in M_1 : d_1(x,y)<\delta \Rightarrow d_2(f(x),f(y))<\varepsilon\]
+Vsaka enakomerno zvezna preslikava je zvezna, obratno pa je res samo če je $(M_1, d_1)$ kompakten.
 \subsubsection{Skrčitve}
+Preslikava $f:(M, d) \to (M, d)$ je \textbf{skrčitev}, če
+\[d(f(x), f(y)) \leq q d(x,y) \quad \textmd{ za nek }q \in [0,1)\]
 \subsubsection{Banachovo načelo}
+Naj bo $(M,d)$ poln in $f:M\to M$ skrčitev. Potem obstaja natanko en $x_0 \in M$ za katerega je $f(x_0) = x_0$.
 \end{multicols}
 \end{document}

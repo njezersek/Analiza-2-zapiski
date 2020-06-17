@@ -108,7 +108,7 @@ Polinom $q$ rezcepimo na linearne in nerazcepne kvadratne faktorje.
 Funkcijo $\frac{p(x)}{q(x)}$ zapišemo kot vsoto parcialnih ulomkov:
 \[\frac{1}{(x-a)^k} \leadsto \frac{A_1}{(x-a)}+\frac{A_2}{(x-a)^2} + ... + \frac{A_k}{(x-a)^k} \]
 \[\frac{1}{(x^2+bx+c)^l} \leadsto \frac{B_1 + C_1x}{(x^2+bx+c)} + ... + \frac{B_l + C_lx}{(x^2+bx+c)^l} \]
-Parcialne ulomke posamično integriremo:
+Parcialne ulomke posamično integriremo (\emph{imenovalec mora biti nerazcepen!}):
 \[ \int \frac{dx}{ax^2+bx+c} = \frac{1}{a \omega} \arctan \left( \frac{2ax + b}{2a \omega}\right);\ \omega = \frac{c}{a} - \left(\frac{b}{2a}\right)^2\]
 \[ \int \frac{px+q}{\underbrace{ax^2+bx+c}_{t}}dx = \frac{p}{2a} \ln \left| t \right| + \left( q-\frac{pb}{2a} \right) \int \frac{dx}{t}\]
 \[ \int \frac{px+q}{(ax^2+bx+c)^n}dx = \frac{p}{2a}\frac{t^{1-n}}{1-n} + \left( q-\frac{pb}{2a} \right) \int \frac{dx}{t^n}\]
@@ -138,7 +138,7 @@ Integrale z trigonometričnimi funkcijami z univerzalno trigonometrično substit
 Integrale tipa $\int \frac{p(x) dx}{\sqrt{ax^2+bx+c}}$ rešujemo na naslednji način:
 
 \begin{itemize}
-    \item Če je $p$ konstanten, integral (s substitucijo) prevedemo na enega izmed:
+    \item Če je $p$ konstanten, integral (z dopolnitvijo do $\blacksquare$ in s substitucijo) prevedemo na enega izmed:
     \[\int \frac{dx}{\sqrt{a^2-x^2}} = \arcsin\left( \frac{x}{a} \right) + C;\quad a > 0\]
     \[\int \frac{dx}{\sqrt{x^2-a^2}} = \ln \left| x + \sqrt{x^2 - a^2} \right| + C;\quad a > 0\]
     \[\int \frac{dx}{\sqrt{x^2+a^2}} = \ln \left( x + \sqrt{x^2 + a^2} \right) + C;\quad a > 0\]
@@ -233,7 +233,7 @@ $\tau = \frac{(\vect{r}\,' \times \vect{r}\,'')\vect{r}\,'''}{|\vect{r}\,''|^2}\
 \end{equation*}
 
 \subsubsection{Frenetova baza in ukrivljenost v poljubni parametrizaciji}
-Naj bo $\vect{r}(t)$ poljubna regularna pot z neničelno fleksijska ukrivljenostjo.
+Naj bo $\vect{r}(t)$ poljubna regularna pot z neničelno fleksijsko ukrivljenostjo.
 \begin{equation*}
     \begin{aligned}
         \vect{T} = \frac{\dot{\vect{r}}}{|\dot{\vect{r}}|} \quad &&
@@ -306,7 +306,7 @@ Preslikava $f$ je zvezna v točki $a \in M_1$ $\Leftrightarrow$ za vsako zapored
 
 \subsubsection{Enakomerna zveznost preslikave}
 Preslikava $f:(M_1, d_1) \to (M_2, d_2)$ je enakomerno zvezna, če
-\[\forall \varepsilon > 0\ \exists \delta > 0\ \forall x,y \in M_1 : d_1(x,y)<\delta \Rightarrow d_2(f(x),f(y))<\varepsilon\]
+\[\scriptstyle{\forall \varepsilon > 0\ \exists \delta > 0\ \forall x,y \in M_1 : d_1(x,y)<\delta \Rightarrow d_2(f(x),f(y))<\varepsilon}\]
 Vsaka enakomerno zvezna preslikava je zvezna, obratno pa je res samo če je $(M_1, d_1)$ kompakten.
 \subsubsection{Skrčitve}
 Preslikava $f:(M, d) \to (M, d)$ je \textbf{skrčitev}, če
@@ -319,17 +319,21 @@ Naj bo $f : \mathbb{R}^2 \to \mathbb{R}$ funkcija in $(a,b) \in \mathbb{R^2}$
 \begin{itemize}
     \item \textbf{Limita} $A = \lim_{(x,y) \to (a,b)} f(x,y)$, če velja
     \begin{multline*}
-            \forall \varepsilon > 0\ \exists \delta > 0\ \forall (x,y) \in \mathbb{R}^2 :\\ 0 < \sqrt{(x-a)^2+(y-b)^2} < \delta \Rightarrow |f(x,y) - A| < \varepsilon
+            \scriptstyle{\forall \varepsilon > 0\ \exists \delta > 0\ \forall (x,y) \in \mathbb{R}^2 :}\\ 
+            \scriptstyle{0 < \sqrt{(x-a)^2+(y-b)^2} < \delta \Rightarrow |f(x,y) - A| < \varepsilon}
     \end{multline*}
     \item Funkcija je \textbf{zvezna} v točki $(a,b)$, če
     \begin{multline*}
-            \forall \varepsilon > 0\ \exists \delta > 0\ \forall (x,y) \in \mathbb{R}^2 :\\ 0 < \sqrt{(x-a)^2+(y-b)^2} < \delta \Rightarrow |f(x,y) - f(a,b)| < \varepsilon
+            \scriptstyle{\forall \varepsilon > 0\ \exists \delta > 0\ \forall (x,y) \in \mathbb{R}^2 :}\\ 
+            \scriptstyle{0 < \sqrt{(x-a)^2+(y-b)^2} < \delta \Rightarrow |f(x,y) - f(a,b)| < \varepsilon}
     \end{multline*}
     \item Če je $f$ zvezna v točiki $(a,b)$, je
     \[\lim_{(x,y) \to (a,b)} f(x,y) = f(a,b) \]
 \end{itemize}
 \subsubsection{Smerni odvod}
-\[\frac{\partial f}{\partial \vect{s}}(x,y) = \lim_{t \to 0} \frac{f((x,y) + t\vect{s}\,)}{t}\]
+\[\frac{\partial f}{\partial \vect{s}}(x,y) = \lim_{t \to 0} \frac{f((x,y) + t\vect{s}\,)}{t} = \triangledown f \vect{s}\]
+Gradient:
+\[ \triangledown f = (\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y})\]
 
 \subsubsection{Parcialni odvod}
 \[f_x = \frac{\partial f}{\partial x} (a,b) = \lim_{t \to 0} \frac{f(a + h, b) - f(a,b)}{h}\]
@@ -388,5 +392,48 @@ Kandidati za lokalne ekstreme so točke $(a,b)$ v katerih je
     \item $ \det H(a,b) = 0$ $\leadsto$ \emph{ne vemo kaj je to}
     \item $ \det H(a,b) < 0$ $\leadsto$ \emph{to ni lokalni ekstrem, ampak} \textbf{sedlo}
 \end{itemize}
+
+\section{Preslikave $F: \mathbb{R}^n \to \mathbb{R}^m$}
+\[F(x_1, ..., x_n) = \begin{bmatrix}
+    f_1(x_1, ..., x_n) \\
+    \scriptstyle{\vdots} \\
+    f_m(x_1, ..., x_n) \\
+\end{bmatrix}\]
+
+Odvod preslikave $F$ v točki $x = (x_1,...,x_n)$ je takšna $n \times m$ matrika $A$, da velja
+\[ \lim_{h \to 0} \frac{|F(x+h) - F(x) - Ah|}{|h|} = 0\]
+
+Matriko $A$ imenujemo \textbf{Jacobijeva matrika}
+\[DF(x) = \begin{bmatrix}
+    \frac{\partial f_1}{\partial x_1} & \dots & \frac{\partial f_1}{\partial x_n} \\
+    \vdots & & \vdots \\
+    \frac{\partial f_m}{\partial x_1} & \dots & \frac{\partial f_m}{\partial x_n}
+\end{bmatrix}\]
+
+\subsubsection{Odvod kompozituma}
+\[D(G \circ F)(x) = DG(F(x))DF(x)\]
+
+\subsubsection{Približna vrednost preslikave}
+$F:\mathbb{R}^n \to \mathbb{R}^m$, $h \in \mathbb{R}^n : |h| \cong 0$
+
+\[F(x + h) \cong F(x) + DF(x)h\]
+
+\subsubsection{Izrek o inverzni preslikavi}
+Naj bo $f: \mathbb{R}^n \to \mathbb{R}^n$ z lastnostijo, da je $Df(a)$ obrnljiva matrika. Potem lokalno (okoli $f(a)$) obstaja inverz preslikave $f$ in velja
+\[F(f^{-1})(f(a)) = Df(a)^{-1}\]
+
+\subsubsection{Izrek o implicitni preslikavi}
+Naj bo $f:\mathbb{R}^n \to \mathbb{R}^m$ gladka preslikava z lastnostijo, da je $f(a,b) = 0$ in da je $D_yf(a,b)$ obrnljiva.
+Potem lokalno (okoli $b$) obstaja gladka preslikava $g:\mathbb{R}^n \to \mathbb{R}^m$, da je $g(a) = b$ in
+\[\forall x : f(x,g(x)) = 0\]
+dodatno velja
+\[Dg(a)=-D_yf(a,b)^{-1}D_xf(a,b)\]
+
+\subsubsection{Vezani ekstremi}
+Iščemo ekstreme funkcije $f(x,y)$ pri pogoju $g(x,y) = 0$.
+
+Potreben pogoj za ekstrem je, da je gradient funkcije $f$ vzporeden gradientu funkcije $g$. Ta pogoj lahko izrazimo tudi z:
+\[F(x,y,\lambda) = f(x,y) - \lambda g(x,y)\]
+in izračunamo lokalne ekstreme funkcije $F$. \emph{Če imamo več pogojev, dodamo $\lambda_i$}
 \end{multicols}
 \end{document}

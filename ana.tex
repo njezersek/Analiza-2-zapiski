@@ -313,5 +313,80 @@ Preslikava $f:(M, d) \to (M, d)$ je \textbf{skrčitev}, če
 \[d(f(x), f(y)) \leq q d(x,y) \quad \textmd{ za nek }q \in [0,1)\]
 \subsubsection{Banachovo načelo}
 Naj bo $(M,d)$ poln in $f:M\to M$ skrčitev. Potem obstaja natanko en $x_0 \in M$ za katerega je $f(x_0) = x_0$.
+
+\section{Funkcije dveh spremenlivk}
+Naj bo $f : \mathbb{R}^2 \to \mathbb{R}$ funkcija in $(a,b) \in \mathbb{R^2}$
+\begin{itemize}
+    \item \textbf{Limita} $A = \lim_{(x,y) \to (a,b)} f(x,y)$, če velja
+    \begin{multline*}
+            \forall \varepsilon > 0\ \exists \delta > 0\ \forall (x,y) \in \mathbb{R}^2 :\\ 0 < \sqrt{(x-a)^2+(y-b)^2} < \delta \Rightarrow |f(x,y) - A| < \varepsilon
+    \end{multline*}
+    \item Funkcija je \textbf{zvezna} v točki $(a,b)$, če
+    \begin{multline*}
+            \forall \varepsilon > 0\ \exists \delta > 0\ \forall (x,y) \in \mathbb{R}^2 :\\ 0 < \sqrt{(x-a)^2+(y-b)^2} < \delta \Rightarrow |f(x,y) - f(a,b)| < \varepsilon
+    \end{multline*}
+    \item Če je $f$ zvezna v točiki $(a,b)$, je
+    \[\lim_{(x,y) \to (a,b)} f(x,y) = f(a,b) \]
+\end{itemize}
+\subsubsection{Smerni odvod}
+\[\frac{\partial f}{\partial \vect{s}}(x,y) = \lim_{t \to 0} \frac{f((x,y) + t\vect{s}\,)}{t}\]
+
+\subsubsection{Parcialni odvod}
+\[f_x = \frac{\partial f}{\partial x} (a,b) = \lim_{t \to 0} \frac{f(a + h, b) - f(a,b)}{h}\]
+\[f_y = \frac{\partial f}{\partial y} (a,b) = \lim_{t \to 0} \frac{f(a, b + h) - f(a,b)}{h}\]
+Če sta $\frac{\partial^2 f}{\partial xy}$ in $\frac{\partial^2 f}{\partial yx}$ zvezna, sta enaka.
+
+\subsubsection{Diferenciabilnost}
+Funkcija $f$ je diferenciabilna, če obstajata konstanti $A, B \in \mathbb{R}$, da je
+\[ \lim_{(h,k) \to (0,0)} \frac{f(a+h, b+k) - f(a,b) - Ah - Bk}{\sqrt{h^2 + k^2}} = 0\]
+\begin{itemize}
+    \item Če je $f$ diferenciabilna v $(a,b)$, je
+    \begin{equation*}
+        \begin{aligned}
+            A = \frac{\partial f}{\partial x} (a,b) &&
+            B = \frac{\partial f}{\partial y} (a,b)
+        \end{aligned}
+    \end{equation*}                                                                                 
+    \item Če je $f$ parcialno odvedljiva v $(a,b)$ in sta parcialna odvoda zvezna v $(a,b)$, je $f$ diferenciabilna v $(a,b)$.
+\end{itemize}
+
+\subsubsection{Taylorjeva formula}
+Taylorjev razvoj funkcije $f$ okoli točke $(a,b)$
+\begin{multline*}
+    \scriptstyle{
+    f(x,y) = f(a,b) + \frac{\partial f}{\partial x} (a,b)(x-a) + \frac{\partial f}{\partial y} (a,b)(y-b) +
+    }\\
+    \scriptstyle{
+        + \frac{1}{2!}\left( \frac{\partial^2 f}{\partial x^2}(a,b) (x-a)^2 + \frac{\partial^2 f}{\partial xy} (a,b)(x-a)(y-b) + \frac{\partial^2 f}{\partial y^2}(a,b)(y-b)^2 \right) +
+    }\\
+    \scriptstyle{
+        \dots + \frac{1}{n!} \sum_{k=0}^{n} \binom{n}{n-k} \frac{\partial^n f}{\partial x^{n-k} \partial y^{k}} (a,b)(x-a)^{n-k} (y-b)^k\, + \dots
+    }
+\end{multline*}
+
+\subsubsection{Lokalni ekstremi}
+Kandidati za lokalne ekstreme so točke $(a,b)$ v katerih je
+\begin{equation*}
+    \begin{aligned}
+        f_x(a,b) = \frac{\partial f}{\partial x} (a,b) = 0 &&
+        \textmd{in} &&
+        f_y(a,b) = \frac{\partial f}{\partial y} (a,b)= 0
+    \end{aligned}
+\end{equation*}
+
+\textbf{Hessejeva matrika}
+\[H(a,b) = \begin{bmatrix}
+    f_{xx}(a,b) & f_{xy}(a,b) \\
+    f_{xy}(a,b) & f_{yy}(a,b) \\
+\end{bmatrix}\]
+\begin{itemize}
+    \item $ \det H(a,b) > 0$
+    \begin{itemize}
+        \item $f_{xx}(a,b) > 0$ $\leadsto$ \textbf{lokalni minimum}
+        \item $f_{xx}(a,b) < 0$ $\leadsto$ \textbf{lokalni maksimum}
+    \end{itemize}
+    \item $ \det H(a,b) = 0$ $\leadsto$ \emph{ne vemo kaj je to}
+    \item $ \det H(a,b) < 0$ $\leadsto$ \emph{to ni lokalni ekstrem, ampak} \textbf{sedlo}
+\end{itemize}
 \end{multicols}
 \end{document}

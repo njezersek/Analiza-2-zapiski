@@ -506,5 +506,33 @@ kjer so $p,q,\lambda \in \mathbb{R}$, $P(x)$ pa polinom.
 Partikularno rešitev določimo z nastavkom
 \[y_p = Q(x)x^ke^{\lambda x}\]
 Kjer je $Q(x)$ polinom iste stopnje kot $P$, $k$ pa pove večkratnost ničle karakterističnega polinoma. 
+
+\subsubsection{Sistemi linearnih diferencialnih enačb}
+\[\dot{x} = Ax\]
+Kjer je $A$ $2\times 2$ matrika.
+\begin{itemize}
+    \item Če se $A$ da diagonalizirati, oziroma ima dva linearno neodvisna lastna vektorja $\vect{e}_1$, $\vect{e}_2$ in lastni vrednosti $\lambda_1, \lambda_2$.
+    \[x(t) = C_1e^{\lambda_1t} \vect{e}_1 + C_2e^{\lambda_2t} \vect{e}_2\]
+    \item Če se $A$ ne da diagonalizirati, oziroma ima samo en lastni vektor $\vect{e}$, potem izračunamo $\vect{k}$ kot rešitev $(A-\lambda I)\vect{k} = \vect{e}$
+    \[x(t) = C_1e^{\lambda t} \vect{e} + C_2e^{\lambda t} (\vect{k} + t\vect{e}) \]
+\end{itemize}
+
+\section{Funkcijska zaporedja in vrste}
+Zaporedje funkcij $f_n$ \textbf{po točkah konvergira} proti $f$, če $\forall x \in I : \lim_{n \to \infty} f_n(x) = f(x)$.
+
+$f_n$ \textbf{enakomerno konvergira} proti $f$, če $\forall \varepsilon > 0\ \exists n_0 \in \mathbb{N} : n \geq n_0 \Rightarrow \sup |f_n(x) - f(x) | < \varepsilon$
+
+\begin{itemize}
+    \item Če $f_n$ konvergira enakomirno, konvergira tudi po točkah
+    \item Če zaporedje zveznih funkcji konvergira proti $f$, je tudi $f$ zvezna
+    \item Če zaporedje $f_n$ enakomerno konvergira proti $f$, tudi $\int_a^x f_n(t) dt$ enakomerno konvergira proti $\int_a^x f(t) dt$ 
+    \item Če zaporedje odvedljivih $f_n$, konvergira po točkah k $f$, in zaporedje $f'_n$ konvergira enakomerno, potem $f'_n$ konvergira k $f'$
+    \item \textbf{Weierstrassov kriterij} Če $|f_n(x)-f(x)| < c_n\ \forall x \in I$ in $\lim_{n \to \infty} c_n = 0$, zaporedje $f_n$ enakomerno konvergira k $f$
+\end{itemize}
+
+
+Funkcijska vrsta $\sum f_n$ \textbf{po točkah konvergira}, če $\forall x \in I$ vrsta konvergira.
+
+$\sum f_n$ \textbf{enakomerno konvergira}, če enakomerno konvergira zaporedje delnih vsot.
 \end{multicols}
 \end{document}

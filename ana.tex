@@ -463,5 +463,48 @@ Sicer, enačbo prevedemo na linearno.
 Enačbo delimo z $y^\alpha$ in uvedemo novo funkcijo $z = y^{1-\alpha}$ $\Rightarrow$ $z' = (1-\alpha)y'y^{-\alpha}$. Dobimo linearno enačbo:
 \[\frac{1}{1-\alpha} pz' + qz = r\]
 
+\subsubsection{Eksaktne diferencialne enačbe}
+\[P(x,y)dx + Q(x,y)dy = 0 \quad \textmd{ali} \quad P+Qy' = 0\]
+Naj bo rešitev enačbe $u(x,y) = C$.
+
+Če je $P_y = Q_x$, obstaja funckcija $u$, da je $\triangledown u = (P,Q) \Rightarrow$ $u_x = P$, $u_y = Q$.
+
+\emph{Izračunamo $u$ tako da $u_x$ integriramo po $x$ (namesto konstante prištejemo funkcijo $f(y)$). Nato pravkar izračunani $u$ odvajamo po $y$ in ga enačimo z $u_y = Q$. Izrazimo $f'$ in z integriranjem dobimo $f$. }
+
+Če $P_y \neq Q_x$, obstaja integrajoči množitelj $\mu$, da je $(\mu P)_y = (\mu Q)_x$
+
+\subsubsection{Homegena linearna dif. enačba 2. reda}
+\[y'' + p(x)y' + q(x)y = 0\]
+Naj bo $y_1(x)$ dana rešitev enačbe. Drugo linearno neodvisno rešitev $y_2(x)$ dobimo kot rešitev
+\[y_1y'_2 - y'_1 y_2 = W(x) \quad W(x) = e^{-\int p(x)dx}\]
+
+\subsubsection{Nehomogena linearna dif. enačba 2. reda}
+\[y'' + p(x)y' + q(x)y = r(x)\]
+Naj bosta $y_1, y_2$ linearno neodvisni rešitvi homegene enačbe ($r(x) = 0$). Partikularno rešitev dobimo z nastavkom:
+\[y_p = C_1(x)y1+c_2(x)y_2\]
+kjer funkciji $C_1, C_2$ zadoščata
+\[C'_1y_1+C'_2y_2 = 0 \quad \quad C'_1y'_1+C'_2y'_2 = r(x)\]
+
+\subsubsection{Linearna dif. enačba 2. reda s konstantnimi koeficienti}
+\[y'' + py' + qy = r(x)\]
+Kjer sta $p, r \in \mathbb{R}$. 
+
+Najprej rešimo homogeni del. V zgornjo enačbo vstavimo $y = e^{\lambda x}$ in dobimo karakteristični polinom:
+\[\lambda^2+p\lambda+q=0\]
+\begin{itemize}
+    \item Če je $\lambda_1, \lambda_2 \in \mathbb{R}$, je splošna rešitev oblike
+    \[y = C_1e^{\lambda_1 x}+C_2e^{\lambda_2 x}\]
+    \item Če je $\lambda_1, \lambda_2 \in \mathbb{C}$, je splošna rešitev oblike
+    \[\lambda_1 = a + bi \quad \quad \lambda_2 = a - bi \]
+    \[y = C_1e^{a x} \cos bx +C_2e^{a x} \sin ax \]
+\end{itemize}
+
+\subsubsection{Linearna dif. enačba 2. reda s konstantnimi koeficienti in posebno vrsto nehomogenosti}
+\[y'' + py' + qy = P(x)e^{\lambda x}\]
+kjer so $p,q,\lambda \in \mathbb{R}$, $P(x)$ pa polinom.
+
+Partikularno rešitev določimo z nastavkom
+\[y_p = Q(x)x^ke^{\lambda x}\]
+Kjer je $Q(x)$ polinom iste stopnje kot $P$, $k$ pa pove večkratnost ničle karakterističnega polinoma. 
 \end{multicols}
 \end{document}

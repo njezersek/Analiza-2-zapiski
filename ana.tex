@@ -435,5 +435,33 @@ Iščemo ekstreme funkcije $f(x,y)$ pri pogoju $g(x,y) = 0$.
 Potreben pogoj za ekstrem je, da je gradient funkcije $f$ vzporeden gradientu funkcije $g$. Ta pogoj lahko izrazimo tudi z:
 \[F(x,y,\lambda) = f(x,y) - \lambda g(x,y)\]
 in izračunamo lokalne ekstreme funkcije $F$. \emph{Če imamo več pogojev, dodamo $\lambda_i$}
+
+\section{Diferencialne enačbe}
+\subsubsection{Ločljive spremenljivke}
+\[g(y)y' = f(x)\]
+Upoštevamo, da je $y' = \frac{dy}{dx}$. Enačbo pomnožimop z $dx$ in integriramo obe strani enačbe.
+
+\subsubsection{Homogena diferencialna enačba}
+\[ y' = f(\frac{y}{x}) \]
+Uvedemo novo spremenlivko $v(x) = \frac{y}{x}$ $\Rightarrow$ $y = xv$ $\Rightarrow$ $y' = xv' + v$, vstavimo v začetno enačbo in dobimo
+\[xv' v = f(x)\ \Rightarrow\ \frac{v'}{f(v)-v} = \frac{1}{x}\]
+
+\subsubsection{Linearna diferencialna enačba}
+\[ p(x)y' + q(x)y = r(x)\]
+Najprej rešimo \emph{homogeni del} ($r(x) = 0$)
+\[py' + qy = 0\ \Rightarrow\ y = De^{P(x)};\ P(x) = -\int \frac{q}{p} dx \]
+$D$ postane funkcija odvisna od $x$ (\emph{variacija konstante}). Zgornjo enačbo odvajoamo in dobimo $y'$.
+\[y' = D'e^P - \frac{q}{p}De^P\]
+$y$ in $y'$ vstavimo v prvotno enačbo in iz nje izrazimo $D'$, $D$ dobimo z integriranjem.
+
+\subsubsection{Bernoullijeva diferencialna enačba}
+\[ p(x)y' + q(x)y = r(x)^\alpha\]
+Če je $\alpha = 0$, je enačba linearna.
+Če je $\alpha = 1$ ima ločljive spremenljivke.
+Sicer, enačbo prevedemo na linearno.
+
+Enačbo delimo z $y^\alpha$ in uvedemo novo funkcijo $z = y^{1-\alpha}$ $\Rightarrow$ $z' = (1-\alpha)y'y^{-\alpha}$. Dobimo linearno enačbo:
+\[\frac{1}{1-\alpha} pz' + qz = r\]
+
 \end{multicols}
 \end{document}
